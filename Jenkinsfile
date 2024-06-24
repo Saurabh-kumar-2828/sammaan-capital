@@ -61,18 +61,6 @@ pipeline {
             }
         }
 
-        stage("Cloning git website") {
-            steps {
-                script {
-                    if (env.BRANCH_NAME == "prod" || env.BRANCH_NAME == "stage") {
-                        git branch: env.BRANCH_NAME, credentialsId: "33c357dc-5f11-4930-9063-07bc866f7cff", url: "https://github.com/GrowthJockey/${GITHUB_REPOSITORY_NAME}.git"
-                    } else {
-                        return
-                    }
-                }
-            }
-        }
-
         stage("Health check") {
             steps {
                 script {
