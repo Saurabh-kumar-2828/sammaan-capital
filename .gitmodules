@@ -1,0 +1,3 @@
+[submodule "app/common--database-manager--postgres"]
+    path = app/common--database-manager--postgres
+    url = ../common--database-manager--postgres.git
